@@ -1,0 +1,56 @@
+body{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.synthContainer{
+    margin-top: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.125);
+    box-shadow: 2px 2px 10px 0px rgba(0,0,0,0.75);
+}
+
+.title {
+    color: #333;
+    font-size: 4em;
+}
+
+.subTitle {
+    font-size: 1.2em;
+}
+
+.description{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 1em;
+}
+
+.inTheCenter{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.someMargin{
+    margin: 10px;
+}
+
+.marginTop{
+    margin-top: 15px;
+}
+
+.filter{
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+#number{
+    background-color: #808080;
+    border: 0px;
+    color: #ff0;
+    font-weight: bold;
+    font-size: 2em;
+    text-align: center;
+}
+

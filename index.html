@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>A d d E s s o</title> <!-- title -->
+
+    <link href="lib/bootstrap-5.0.0-beta1-dist/css/bootstrap.min.css" rel="stylesheet"> <!-- place boostrap before your stylesheet -->
+    <link rel="stylesheet" href="css/addesso.css"> <!-- your personal stylesheet -->
+    <script type="text/javascript" src="lib/nexus_lib.js"></script> <!-- Nexus.js library -->
+    <script src="lib/bootstrap-5.0.0-beta1-dist/js/bootstrap.bundle.min.js" ></script>  <!-- boostrap javascript -->
+    <script src="http://reverbjs.org/reverb.js"></script> <!-- Reverb.js library -->
+  </head>
+
+  <body>
+
+    <div class="title"><b>A d d E s s o</b></div> <!-- title -->
+    <div class="subTitle"> Additive web synth in the style of the <!-- subtitle title -->
+        <a href="http://xaocdevices.com/main/odessa/" target="_blank">odessa</a> eurorack module
+    </div>
+    <div class="description">  <!-- Web Audio API Workshop - description -->
+      <a href="http://www.albertobarberis.it/index.html" target="_blank">Alberto Barberis</a>  
+    </div>
+
+    <div class="synthContainer"> <!-- container of the synth -->
+      <div class="container ">
+        
+        <div class="row">  <!-- top row -->
+          <div class="col-xl-4">
+            <div class="inTheCenter">
+              <div id="maxPartials"></div>
+            </div>max n. of partials
+          </div>
+          <div class="col-xl-4">
+            <div class="inTheCenter">
+              <div id="onOff"></div>
+            </div> off | on
+          </div>
+          <div class="col-xl-4">
+            <div class="inTheCenter">
+              <div id="masterGain"></div>
+            </div> master gain
+          </div>
+        </div>
+
+        <div class="row"> <!-- central "partial dial" row -->
+          <div class="col-xl-4">
+            <div class="someMargin inTheCenter">
+              <div id="dialTension"></div>
+            </div>
+            <span id="buttonTension"></span> tension
+            <div class="someMargin inTheCenter">
+              <div id="dialFM"></div>
+            </div>
+            <span id="buttonFM"></span> modulator Hz
+            <div class="someMargin">
+              index <span id="indexOfModulation"></span>
+              <span class="FMtype" id="FMtype"> </span>
+            </div>
+          </div>
+          <div class="col-xl-4">
+            <div class="inTheCenter partialDialContainer">
+              <div id="dialPartial"></div>
+            </div> partials
+            <div class="inTheCenter">
+              <input type="text" id="number" value=" " disabled size="3" >
+            </div>
+          </div>
+          <div class="col-xl-4">
+            <div class="someMargin inTheCenter">
+              <div id="dialTilt"></div>
+            </div>
+            <span id="buttonTilt"></span> spectral tilt
+            <div class="someMargin inTheCenter">
+              <div id="dialCutOff"></div>
+            </div>
+            <span id="buttonCutOff"></span> cut off Hz
+            <div class="someMargin inTheCenter">
+              filter <span id="toggleFilter">  </span>    
+              <span class="filter" id="filter"> </span>
+              Q <span class="filter" id="numberQ">  </span> 
+            </div> 
+          </div>
+        </div>
+
+         <div class="row"> <!-- piano row -->
+          <div class="col-xl-3">
+            <div class="inTheCenter">
+              <span class="someMargin" id="dialA">A </span>
+              <span class="someMargin" id="dialS">S </span>
+              <span class="someMargin" id="dialR">R </span>
+            </div>
+          </div>
+          <div class="col-xl-6 marginTop">
+            <div class="inTheCenter">
+              <div id="piano"></div>
+            </div>
+          </div>
+          <div class="col-xl-3 marginTop">
+            <div class="inTheCenter">
+              <div id="spectrum"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row "> <!-- bottom row -->
+          <div class="col-xl-3 marginTop">
+             <span id="reverbAmount">reverb </span>  
+          </div>
+          <div class="col-xl-6 marginTop">
+              <span id="legato">key mode </span>
+              <span id="ottava">octaves </span>  
+          </div>
+        </div>
+      </div>
+    </div> <!-- end of synth container -->
+  </body>
+
+<!-- my javascript -->
+  <script src="js/Voice.js"></script>
+  <script src="js/Partial.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/gui.js"></script>
+</html>
